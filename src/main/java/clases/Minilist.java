@@ -5,21 +5,19 @@ import java.util.ArrayList;
 public interface Minilist {
 	
 	
-	ArrayList<Main> minilist = new ArrayList<Main>();
-	
 	/**
 	 * Añade un objeto a la lista.
-	 * @param Objeto
-	 * @return Object
+	 * @param Object
+	 * @return boolean
 	 */
-	public Object add (ArrayList<Main> Objeto);
+	public boolean add (Object elemento) throws NullPointerException;
 	
 	/**
 	 * Permite saber si un elemento esta o no esta en la lista.
 	 * @param Objeto
 	 * @return boolean
 	 */
-	public boolean contains(ArrayList<Main> Objeto);
+	public boolean contains(Object elemento);
 	
 	
 	/**
