@@ -3,63 +3,76 @@ package clases;
 import java.util.ArrayList;
 
 public interface Minilist {
-	
-	
+
 	/**
-	 * Añade un objeto a la lista.
+	 * El metodo introduce un elemento al final de la lista se pasa elemento a
+	 * introducir indica true si el elemento fue insertado lanza
+	 * NullPointerException en caso de intentar insertar un valor nulo
+	 * 
 	 * @param Object
 	 * @return boolean
 	 */
-	public boolean add (Object elemento) throws NullPointerException;
-	
+	public boolean add(Object elemento) throws NullPointerException;
+
 	/**
-	 * Permite saber si un elemento esta o no esta en la lista.
-	 * @param Objeto
+	 * Metodo que comprueba la existencia de un elemento en la lista se pasa
+	 * elemento a buscar indica verdadero si esta, falso si no esta
+	 * 
+	 * @param Object
 	 * @return boolean
 	 */
 	public boolean contains(Object elemento);
-	
-	
+
 	/**
-	 * permite borrar elemento que se le pasa como parametro a la lista 
-	 * y nos indica si el elemento se ha borrado o no.
-	 * @param Objeto
+	 * Elimina el primer elemento que encuentre en la lista que sea igual al
+	 * elemento que se pasa como parámetro se pasa elemento a eliminar indica
+	 * verdadero si elimino, falso si no
+	 * 
+	 * @param Object
 	 * @return boolean
 	 */
 	public boolean delete(Object elemento);
-	
+
 	/**
-	 * Indica la posicion del elemento a eliminar.
-	 * @param Objeto
-	 * @return Object[]
+	 * Elimina el elemento que ocupe la posición que se indica como parámetro se
+	 * pasa posición del elemento a eliminar indica verdadero si se elimino, falso
+	 * si no
+	 * 
+	 * @param int
+	 * @return boolean
 	 */
-	public boolean delete (int elemento);
-	
+	public boolean delete(int elemento);
+
 	/**
-	 * Añade un elemento en una posicion concreta de la lista y lo sobreescribe 
-	 * y dice si el elemento que hay ha cambiado o es el mismo.
-	 * @param Objeto
-	 * @return Object[]
+	 * Cambia el elemento que está en la posición que se pasa como parametro se
+	 * indica posición a cambiar se pasa elemento a introducir verdadero si se
+	 * cambió, falso si no
+	 * 
+	 * @param Object
+	 * @return boolean
 	 */
-	public Object[] añadir (ArrayList<Main> Objeto);
-	
+	public boolean set(Object elemento);
+
 	/**
-	 * Devuelve el elemento que se pida según su posicion.
-	 * @param Objeto
-	 * @return Object[]
+	 * Devuelve el elemento de la posición que se pasa como parámetro
+	 * 
+	 * @param Object
+	 * @return Object
 	 */
-	public  Object[] posicion (ArrayList<Main> Objeto);
-	
+	public Object get(Object elemento);
+
 	/**
-	 * Devuelve la cantidad de elementos que exista en la lista, 
-	 * @param Objeto
+	 * Indica el numero de elementos que tiene la lista
+	 * 
+	 * @param ArrayList
 	 * @return int
 	 */
-	public int said (ArrayList<Main> Objeto);
-	
+	public int size(ArrayList<Main> Objeto);
+
 	/**
-	 * Vacia la lista de elementos.
-	 * @param Objeto
+	 * Pone la lista a 0 elementos
+	 * 
+	 * @param ArrayList
 	 */
-	public void clear (ArrayList<Main> Objeto);
+	public void clear(ArrayList<Main> Objeto);
 }
