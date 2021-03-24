@@ -26,14 +26,14 @@ public interface Minilist {
 	 * @param Objeto
 	 * @return boolean
 	 */
-	public boolean delete (ArrayList<Main> Objeto);
+	public boolean delete(Object elemento);
 	
 	/**
 	 * Indica la posicion del elemento a eliminar.
 	 * @param Objeto
 	 * @return Object[]
 	 */
-	public Object[] delete2 (ArrayList<Main> Objeto);
+	public boolean delete (int elemento);
 	
 	/**
 	 * Añade un elemento en una posicion concreta de la lista y lo sobreescribe 
