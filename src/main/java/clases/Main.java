@@ -3,9 +3,57 @@
  */
 package clases;
 
-public class Main {
+public class Main implements Minilist {
     
     public static void main (String [] args) {
     	System.out.println("Hola Mundo");
     }
+
+	@Override
+	public boolean add(Object elemento) throws NullPointerException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean contains(Object elemento) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(Object elemento) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(int elemento) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean set(Object elemento, int posicion) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object get(int posicion) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
 }

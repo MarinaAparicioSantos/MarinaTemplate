@@ -1,7 +1,5 @@
 package clases;
 
-import java.util.ArrayList;
-
 public interface Minilist {
 
 	/**
@@ -9,8 +7,6 @@ public interface Minilist {
 	 * introducir indica true si el elemento fue insertado lanza
 	 * NullPointerException en caso de intentar insertar un valor nulo
 	 * 
-	 * @param Object
-	 * @return boolean
 	 */
 	public boolean add(Object elemento) throws NullPointerException;
 
@@ -18,7 +14,7 @@ public interface Minilist {
 	 * Metodo que comprueba la existencia de un elemento en la lista se pasa
 	 * elemento a buscar indica verdadero si esta, falso si no esta
 	 * 
-	 * @param Object
+	 * @param Object elemento
 	 * @return boolean
 	 */
 	public boolean contains(Object elemento);
@@ -28,7 +24,7 @@ public interface Minilist {
 	 * elemento que se pasa como parámetro se pasa elemento a eliminar indica
 	 * verdadero si elimino, falso si no
 	 * 
-	 * @param Object
+	 * @param Object elemento
 	 * @return boolean
 	 */
 	public boolean delete(Object elemento);
@@ -38,7 +34,7 @@ public interface Minilist {
 	 * pasa posición del elemento a eliminar indica verdadero si se elimino, falso
 	 * si no
 	 * 
-	 * @param int
+	 * @param int elemento
 	 * @return boolean
 	 */
 	public boolean delete(int elemento);
@@ -48,31 +44,28 @@ public interface Minilist {
 	 * indica posición a cambiar se pasa elemento a introducir verdadero si se
 	 * cambió, falso si no
 	 * 
-	 * @param Object
+	 * @param Object elemento
+	 * @param int posicion
 	 * @return boolean
 	 */
-	public boolean set(Object elemento);
+	public boolean set(Object elemento, int posicion);
 
 	/**
 	 * Devuelve el elemento de la posición que se pasa como parámetro
 	 * 
-	 * @param Object
-	 * @return Object
 	 */
-	public Object get(Object elemento);
+	public Object get(int posicion);
 
 	/**
 	 * Indica el numero de elementos que tiene la lista
 	 * 
-	 * @param ArrayList
 	 * @return int
 	 */
-	public int size(ArrayList<Main> Objeto);
+	public int size();
 
 	/**
 	 * Pone la lista a 0 elementos
 	 * 
-	 * @param ArrayList
 	 */
-	public void clear(ArrayList<Main> Objeto);
+	public void clear();
 }
