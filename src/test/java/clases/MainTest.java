@@ -63,7 +63,7 @@ class MainTest {
 	void test01() {
 		//InputStream salida = new ByteArrayInputStream(outputStreamCaptor.toByteArray());
 		//Scanner lectorSalida = new Scanner(salida);
-		Main.main(null);
+		//MiLista.main(null);
 		assertEquals("Hola Mundo", outputStreamCaptor.toString().trim()/*lectorSalida.nextLine()*/);
 		//lectorSalida.close();
 	}

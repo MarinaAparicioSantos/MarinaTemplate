@@ -1,14 +1,18 @@
 package clases;
 
-public interface Minilist {
+public interface MiniList {
 
 	/**
 	 * El metodo introduce un elemento al final de la lista se pasa elemento a
 	 * introducir indica true si el elemento fue insertado lanza
 	 * NullPointerException en caso de intentar insertar un valor nulo
+	 * @param Object elemento
+	 * @return boolean
+	 * @throws NullPointerException
+	 ***************
 	 * 
 	 */
-	public boolean add(Object elemento) throws NullPointerException;
+	boolean add(Object elemento) throws NullPointerException;
 
 	/**
 	 * Metodo que comprueba la existencia de un elemento en la lista se pasa
@@ -52,6 +56,9 @@ public interface Minilist {
 
 	/**
 	 * Devuelve el elemento de la posición que se pasa como parámetro
+	 * @param int posicion
+	 * @return object
+	 * *************
 	 * 
 	 */
 	public Object get(int posicion);
