@@ -17,8 +17,15 @@ public class Main implements Minilist {
 
 	@Override
 	public boolean contains(Object elemento) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		boolean retorno = false;
+		
+		if(elemento !=null){
+		
+			retorno = true;
+			
+		}
+		return retorno;
 	}
 
 	@Override
