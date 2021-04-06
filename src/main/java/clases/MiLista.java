@@ -10,6 +10,7 @@ public class MiLista implements MiniList {
 
 	@Override
 	public boolean add(Object elemento) throws NullPointerException {
+		
 
 		boolean retorno = false;
 		Container nuevo = new Container();
@@ -21,7 +22,10 @@ public class MiLista implements MiniList {
 		obj = elemento;
 
 		while (nuevo != null) {
-			lista.obj = nuevo.next;
+			
+			nuevo.lista.add(obj);
+			
+			retorno = true;
 
 		}
 
@@ -88,6 +92,8 @@ public class MiLista implements MiniList {
 	private class Container {
 		Object obj = null;
 		Container next = null;
+		
+		MiniList lista = new MiLista();  
 
 	}
 
