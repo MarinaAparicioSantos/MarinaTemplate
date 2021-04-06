@@ -3,45 +3,56 @@
  */
 package clases;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Vector;
-
 public class MiLista implements MiniList {
 
-    private Container obj = null;
+	private Container lista = null;
+	private Object obj = null;
+
 	@Override
 	public boolean add(Object elemento) throws NullPointerException {
-		
-//		if(elemento == null)
-//			throw new NullPointerException("no se pueden nulos.");
-//		
-//		obj = elemento;
-//		
-		
 
-		return true;
+		boolean retorno = false;
+		Container nuevo = new Container();
+
+		if (lista == null) {
+			throw new NullPointerException("no se pueden nulos.");
+
+		}
+		obj = elemento;
+
+		while (nuevo != null) {
+			lista.obj = nuevo.next;
+
+		}
+
+		return retorno;
 	}
 
-	
-	
 	@Override
 	public boolean contains(Object elemento) {
-		
+
 		boolean retorno = false;
-		
-		if(elemento !=null){
-		
+
+		if (elemento != null) {
+
 			retorno = true;
-			
+
 		}
 		return retorno;
 	}
 
 	@Override
 	public boolean delete(Object elemento) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean retorno = false;
+		Container actual = lista;
+
+		while (actual != null) {
+			if (actual.obj.equals(elemento)) {
+				actual.obj = null;
+			}
+			actual = actual.next;
+		}
+		return retorno;
 	}
 
 	@Override
@@ -58,7 +69,7 @@ public class MiLista implements MiniList {
 
 	@Override
 	public Object get(int posicion) {
-		
+
 		return null;
 	}
 
@@ -71,13 +82,13 @@ public class MiLista implements MiniList {
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-		
+
 	}
+
 	private class Container {
 		Object obj = null;
 		Container next = null;
-		
+
 	}
 
 }
-
