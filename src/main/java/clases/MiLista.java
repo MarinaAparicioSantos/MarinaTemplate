@@ -3,6 +3,7 @@
  */
 package clases;
 
+
 public class MiLista implements MiniList {
 
 	private Container lista = null;
@@ -12,24 +13,8 @@ public class MiLista implements MiniList {
 	public boolean add(Object elemento) throws NullPointerException {
 		
 
-		boolean retorno = false;
-		Container nuevo = new Container();
 
-		if (lista == null) {
-			throw new NullPointerException("no se pueden nulos.");
-
-		}
-		obj = elemento;
-
-		while (nuevo != null) {
-			
-			nuevo.lista.add(obj);
-			
-			retorno = true;
-
-		}
-
-		return retorno;
+		return true;
 	}
 
 	@Override
@@ -96,5 +81,55 @@ public class MiLista implements MiniList {
 		MiniList lista = new MiLista();  
 
 	}
+	
+//	Container lista;
+//	Container aux = lista;
+//	
+//	for(int i = 0; i < pos -1; i++) { 
+//		aux = aux.next;
+//	}
+//		aux.next = aux.next.next; para eliminar el segundo
+//	}
+	
+	//lista = lista.next para elminar el primero
 
 }
+
+
+
+
+//if (elemento == null) {
+//	throw new NullPointerException("no se pueden nulos.");
+//
+//}
+//Container <T> nuevo = new Container<>();
+//nuevo.elemento = elemento;
+//
+//if(lista == null) {
+//	lista = nuevo;
+//}else {
+//	Container <T> ultimo = lista;
+//	
+//	while(ultimo.next!=null)
+//		ultimo = ultimo.next;
+//	
+//	ultimo.next=nuevo;
+//}
+//numElementos++;
+//return true;
+
+
+
+
+
+
+
+
+//
+//
+//T elemento = null;
+//
+//if(lista !=null && posicion >=0 && posicion<numElementos) {
+//	Container <T> aux=lista;
+//	
+//	int contador = 0;
